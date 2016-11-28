@@ -10,16 +10,16 @@
 		E2CE21371DEC691600526649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE21361DEC691600526649 /* AppDelegate.swift */; };
 		E2CE213C1DEC691600526649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE213A1DEC691600526649 /* Main.storyboard */; };
 		E2CE213E1DEC691600526649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CE213D1DEC691600526649 /* Assets.xcassets */; };
-		E2CE21411DEC691600526649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE213F1DEC691600526649 /* LaunchScreen.storyboard */; };
+		E2CE214C1DEC7AA700526649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE214A1DEC7AA700526649 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E2CE21331DEC691600526649 /* DriveSafeHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveSafeHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CE21331DEC691600526649 /* Drive Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drive Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CE21361DEC691600526649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CE213B1DEC691600526649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2CE213D1DEC691600526649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E2CE21401DEC691600526649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2CE21421DEC691600526649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CE214B1DEC7AA700526649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		E2CE21341DEC691600526649 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E2CE21331DEC691600526649 /* DriveSafeHackathon.app */,
+				E2CE21331DEC691600526649 /* Drive Safe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,9 +53,9 @@
 			isa = PBXGroup;
 			children = (
 				E2CE21361DEC691600526649 /* AppDelegate.swift */,
+				E2CE214A1DEC7AA700526649 /* LaunchScreen.storyboard */,
 				E2CE213A1DEC691600526649 /* Main.storyboard */,
 				E2CE213D1DEC691600526649 /* Assets.xcassets */,
-				E2CE213F1DEC691600526649 /* LaunchScreen.storyboard */,
 				E2CE21421DEC691600526649 /* Info.plist */,
 			);
 			path = DriveSafeHackathon;
@@ -78,7 +78,7 @@
 			);
 			name = DriveSafeHackathon;
 			productName = DriveSafeHackathon;
-			productReference = E2CE21331DEC691600526649 /* DriveSafeHackathon.app */;
+			productReference = E2CE21331DEC691600526649 /* Drive Safe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -121,7 +121,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2CE21411DEC691600526649 /* LaunchScreen.storyboard in Resources */,
+				E2CE214C1DEC7AA700526649 /* LaunchScreen.storyboard in Resources */,
 				E2CE213E1DEC691600526649 /* Assets.xcassets in Resources */,
 				E2CE213C1DEC691600526649 /* Main.storyboard in Resources */,
 			);
@@ -149,10 +149,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E2CE213F1DEC691600526649 /* LaunchScreen.storyboard */ = {
+		E2CE214A1DEC7AA700526649 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E2CE21401DEC691600526649 /* Base */,
+				E2CE214B1DEC7AA700526649 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -261,7 +261,7 @@
 				INFOPLIST_FILE = DriveSafeHackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viseo.DriveSafeHackathon;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Drive Safe";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -275,7 +275,7 @@
 				INFOPLIST_FILE = DriveSafeHackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viseo.DriveSafeHackathon;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Drive Safe";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
