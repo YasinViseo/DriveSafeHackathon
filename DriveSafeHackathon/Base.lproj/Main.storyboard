@@ -127,7 +127,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="G6t-vu-DHz" id="5On-8H-q4p"/>
                         <outlet property="passwordTextField" destination="1Kd-IJ-2bn" id="Kn7-Uk-r21"/>
-                        <segue destination="1f3-MA-fMy" kind="show" identifier="addCarSegue" id="ucS-DI-9lc"/>
+                        <segue destination="1f3-MA-fMy" kind="presentation" identifier="addCarSegue" id="ucS-DI-9lc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pz3-vE-JEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -252,7 +252,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0s-1X-M3Z">
-                                <rect key="frame" x="27" y="455" width="320" height="50"/>
+                                <rect key="frame" x="27" y="402" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.18823529410000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="LINK"/>
@@ -261,7 +261,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="VIN" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NgE-pc-VXC">
-                                <rect key="frame" x="27" y="390" width="320" height="50"/>
+                                <rect key="frame" x="27" y="337" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -269,26 +269,156 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use your VIN number to link your car with the app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDh-tE-Gwc">
-                                <rect key="frame" x="62" y="300" width="250" height="80"/>
+                                <rect key="frame" x="62" y="247" width="250" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.5450980392" green="0.59999999999999998" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="link" translatesAutoresizingMaskIntoConstraints="NO" id="kLW-vP-nMl">
-                                <rect key="frame" x="165" y="248" width="44" height="44"/>
+                                <rect key="frame" x="165" y="195" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="465-YW-Z3z">
+                                <rect key="frame" x="27" y="37" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" image="out">
+                                    <color key="titleColor" red="0.5450980392" green="0.59999999999999998" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOut:" destination="1f3-MA-fMy" eventType="touchUpInside" id="o97-P4-hRr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Link vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tN0-lf-QzZ">
+                                <rect key="frame" x="27" y="85" width="320" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.5450980392" green="0.59999999999999998" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.96078431372549022" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="vinTextField" destination="NgE-pc-VXC" id="yGr-Ud-R2i"/>
+                        <segue destination="u5y-VA-6Rf" kind="presentation" identifier="addDriverSegue" id="oyi-al-BbC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cou-0n-Hvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1382" y="430"/>
+        </scene>
+        <!--Add Driver View Controller-->
+        <scene sceneID="SG5-q0-22W">
+            <objects>
+                <viewController id="u5y-VA-6Rf" customClass="AddDriverViewController" customModule="Drive_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X1m-M8-d9i"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bil-gc-q3G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="opv-R5-YFf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67y-3r-PQG">
+                                <rect key="frame" x="27" y="37" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" image="cancel">
+                                    <color key="titleColor" red="0.5450980392" green="0.59999999999999998" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="u5y-VA-6Rf" eventType="touchUpInside" id="Ibm-YQ-A5O"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bFh-tw-0z2">
+                                <rect key="frame" x="27" y="265" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_boy" translatesAutoresizingMaskIntoConstraints="NO" id="t1n-OA-IFh">
+                                <rect key="frame" x="139" y="145" width="96" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.18823529411764706" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OhV-ll-uCO" appends="YES" id="EBt-6e-Qsk"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcu-yP-OpM">
+                                <rect key="frame" x="27" y="390" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.18823529410000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="addDriver:" destination="u5y-VA-6Rf" eventType="touchUpInside" id="N1P-qO-28h"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HvD-vP-Tpv">
+                                <rect key="frame" x="226" y="338" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="M"/>
+                                    <segment title="F"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.18823529411764706" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="selectGender:" destination="u5y-VA-6Rf" eventType="valueChanged" id="wYK-4n-aQ3"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGQ-TM-bc0">
+                                <rect key="frame" x="27" y="340" width="135" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.5450980392" green="0.59999999999999998" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create driver profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLR-aE-Kjp">
+                                <rect key="frame" x="27" y="85" width="320" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.5450980392" green="0.59999999999999998" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMi-Nd-a2U">
+                                <rect key="frame" x="226" y="138" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" image="remove">
+                                    <color key="titleColor" red="0.5450980392" green="0.59999999999999998" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetProfileImage:" destination="u5y-VA-6Rf" eventType="touchUpInside" id="vzH-wM-cGa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.96078431372549022" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="67y-3r-PQG" id="mgi-vA-xLr"/>
+                        <outlet property="genderSegmentedControl" destination="HvD-vP-Tpv" id="IWi-tY-jqA"/>
+                        <outlet property="nameTextField" destination="bFh-tw-0z2" id="hB3-Pq-fow"/>
+                        <outlet property="profileImageView" destination="t1n-OA-IFh" id="8l3-wx-mIv"/>
+                        <outlet property="removeButton" destination="tMi-Nd-a2U" id="eLz-I5-iEA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3i5-Ie-eZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OhV-ll-uCO">
+                    <connections>
+                        <action selector="selectProfilePhoto:" destination="u5y-VA-6Rf" id="bmt-Jl-wAC"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2424.8000000000002" y="429.53523238380814"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="evQ-D7-jeP">
@@ -306,7 +436,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXw-VW-0mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2958" y="84"/>
+            <point key="canvasLocation" x="2426" y="-261"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TFh-Vx-NRZ">
@@ -324,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nry-Nc-wDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3804" y="81"/>
+            <point key="canvasLocation" x="3486" y="-261"/>
         </scene>
         <!--Select Driver View Controller-->
         <scene sceneID="nye-Qp-hx2">
@@ -349,12 +479,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXI-eq-uX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4565.6000000000004" y="78.710644677661179"/>
+            <point key="canvasLocation" x="4473" y="-261"/>
         </scene>
     </scenes>
     <resources>
-        <image name="cancel" width="40" height="40"/>
+        <image name="cancel" width="32" height="32"/>
         <image name="link" width="44" height="44"/>
         <image name="logIn_Facebook" width="320" height="50"/>
+        <image name="out" width="32" height="32"/>
+        <image name="profile_boy" width="29" height="38"/>
+        <image name="remove" width="24" height="24"/>
     </resources>
 </document>

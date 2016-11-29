@@ -12,6 +12,8 @@
 		A00B354A1DEC7CF30078BD8E /* SelectDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B35471DEC7CF30078BD8E /* SelectDriverViewController.swift */; };
 		BDFC69871F1E6B98B8A4A05E /* Pods_DriveSafeHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2F398BDC88308870AD0F0 /* Pods_DriveSafeHackathon.framework */; };
 		E235CA461DED962B0029BD03 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235CA451DED962B0029BD03 /* Global.swift */; };
+		E235CA491DEDC9BA0029BD03 /* AddDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235CA481DEDC9BA0029BD03 /* AddDriverViewController.swift */; };
+		E235CA4B1DEDDA1E0029BD03 /* AddDriverViewController+UIImagePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235CA4A1DEDDA1E0029BD03 /* AddDriverViewController+UIImagePickerControllerDelegate.swift */; };
 		E2CE21371DEC691600526649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE21361DEC691600526649 /* AppDelegate.swift */; };
 		E2CE213C1DEC691600526649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE213A1DEC691600526649 /* Main.storyboard */; };
 		E2CE213E1DEC691600526649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CE213D1DEC691600526649 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		A00B35461DEC7CF30078BD8E /* DriverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverTableViewCell.xib; sourceTree = "<group>"; };
 		A00B35471DEC7CF30078BD8E /* SelectDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverViewController.swift; sourceTree = "<group>"; };
 		E235CA451DED962B0029BD03 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		E235CA481DEDC9BA0029BD03 /* AddDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddDriverViewController.swift; path = "ViewControllers/Add Driver/AddDriverViewController.swift"; sourceTree = "<group>"; };
+		E235CA4A1DEDDA1E0029BD03 /* AddDriverViewController+UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AddDriverViewController+UIImagePickerControllerDelegate.swift"; path = "ViewControllers/Add Driver/AddDriverViewController+UIImagePickerControllerDelegate.swift"; sourceTree = "<group>"; };
 		E2CE21331DEC691600526649 /* Drive Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drive Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CE21361DEC691600526649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CE213B1DEC691600526649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +99,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E235CA471DEDC9730029BD03 /* Add Driver */ = {
+			isa = PBXGroup;
+			children = (
+				E235CA481DEDC9BA0029BD03 /* AddDriverViewController.swift */,
+				E235CA4A1DEDDA1E0029BD03 /* AddDriverViewController+UIImagePickerControllerDelegate.swift */,
+			);
+			name = "Add Driver";
+			sourceTree = "<group>";
+		};
 		E2CE212A1DEC691600526649 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +154,7 @@
 		E2CE214E1DEC7E7A00526649 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E235CA471DEDC9730029BD03 /* Add Driver */,
 				E2CE219A1DEC9AE300526649 /* Link Car */,
 				E2CE214D1DEC7DEB00526649 /* Log In */,
 				E2CE215E1DEC8D1B00526649 /* Sign Up */,
@@ -312,9 +326,11 @@
 				E2CE21591DEC8B0C00526649 /* String+DataValidation.swift in Sources */,
 				E2CE21371DEC691600526649 /* AppDelegate.swift in Sources */,
 				E235CA461DED962B0029BD03 /* Global.swift in Sources */,
+				E235CA4B1DEDDA1E0029BD03 /* AddDriverViewController+UIImagePickerControllerDelegate.swift in Sources */,
 				A00B354A1DEC7CF30078BD8E /* SelectDriverViewController.swift in Sources */,
 				A00B35481DEC7CF30078BD8E /* DriverTableViewCell.swift in Sources */,
 				E2CE21691DEC8F6500526649 /* LogInViewController.swift in Sources */,
+				E235CA491DEDC9BA0029BD03 /* AddDriverViewController.swift in Sources */,
 				E2CE215C1DEC8B0C00526649 /* UIColor+Extensions.swift in Sources */,
 				E2CE216A1DEC8F6500526649 /* LogInViewController+UITextFieldDelegate.swift in Sources */,
 				E2CE21701DEC90B300526649 /* ActivityIndicatorView.swift in Sources */,
