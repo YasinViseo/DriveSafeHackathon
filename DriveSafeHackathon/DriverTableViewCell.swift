@@ -10,6 +10,17 @@ import UIKit
 
 class DriverTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var avatarImgView: UIImageView!
+    @IBOutlet weak var pseudoLbl: UILabel!
+    @IBOutlet weak var dateStartLbl: UILabel!
+    @IBOutlet weak var dateEndLbl: UILabel!
+    @IBOutlet weak var timeStartLbl: UILabel!
+    @IBOutlet weak var timeEndLbl: UILabel!
+    @IBOutlet weak var percentLbl: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +31,9 @@ class DriverTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+ 
+    
+    
+    
     
 }

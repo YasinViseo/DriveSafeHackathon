@@ -12,6 +12,10 @@
 		A00B354A1DEC7CF30078BD8E /* SelectDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B35471DEC7CF30078BD8E /* SelectDriverViewController.swift */; };
 		BDFC69871F1E6B98B8A4A05E /* Pods_DriveSafeHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2F398BDC88308870AD0F0 /* Pods_DriveSafeHackathon.framework */; };
 		E235CA461DED962B0029BD03 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235CA451DED962B0029BD03 /* Global.swift */; };
+		A00B35531DEC993D0078BD8E /* SectionTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B35521DEC993D0078BD8E /* SectionTableViewHeaderFooterView.swift */; };
+		A00B35551DEC99C90078BD8E /* SectionTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00B35541DEC99C90078BD8E /* SectionTableViewHeaderFooterView.xib */; };
+		A0E0381F1DEDC18C0063B6D7 /* DriverNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E0381D1DEDC18C0063B6D7 /* DriverNameCollectionViewCell.swift */; };
+		A0E038201DEDC18C0063B6D7 /* DriverNameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E0381E1DEDC18C0063B6D7 /* DriverNameCollectionViewCell.xib */; };
 		E2CE21371DEC691600526649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE21361DEC691600526649 /* AppDelegate.swift */; };
 		E2CE213C1DEC691600526649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE213A1DEC691600526649 /* Main.storyboard */; };
 		E2CE213E1DEC691600526649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CE213D1DEC691600526649 /* Assets.xcassets */; };
@@ -36,6 +40,12 @@
 		A00B35461DEC7CF30078BD8E /* DriverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverTableViewCell.xib; sourceTree = "<group>"; };
 		A00B35471DEC7CF30078BD8E /* SelectDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverViewController.swift; sourceTree = "<group>"; };
 		E235CA451DED962B0029BD03 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+
+		A00B35521DEC993D0078BD8E /* SectionTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		A00B35541DEC99C90078BD8E /* SectionTableViewHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionTableViewHeaderFooterView.xib; sourceTree = "<group>"; };
+		A0E0381D1DEDC18C0063B6D7 /* DriverNameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverNameCollectionViewCell.swift; sourceTree = "<group>"; };
+		A0E0381E1DEDC18C0063B6D7 /* DriverNameCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverNameCollectionViewCell.xib; sourceTree = "<group>"; };
+
 		E2CE21331DEC691600526649 /* Drive Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drive Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CE21361DEC691600526649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CE213B1DEC691600526649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +92,10 @@
 				A00B35451DEC7CF30078BD8E /* DriverTableViewCell.swift */,
 				A00B35461DEC7CF30078BD8E /* DriverTableViewCell.xib */,
 				A00B35471DEC7CF30078BD8E /* SelectDriverViewController.swift */,
+				A00B35521DEC993D0078BD8E /* SectionTableViewHeaderFooterView.swift */,
+				A00B35541DEC99C90078BD8E /* SectionTableViewHeaderFooterView.xib */,
+				A0E0381D1DEDC18C0063B6D7 /* DriverNameCollectionViewCell.swift */,
+				A0E0381E1DEDC18C0063B6D7 /* DriverNameCollectionViewCell.xib */,
 			);
 			name = SelectDriver;
 			sourceTree = "<group>";
@@ -241,7 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E038201DEDC18C0063B6D7 /* DriverNameCollectionViewCell.xib in Resources */,
 				E2CE214C1DEC7AA700526649 /* LaunchScreen.storyboard in Resources */,
+				A00B35551DEC99C90078BD8E /* SectionTableViewHeaderFooterView.xib in Resources */,
 				E2CE213E1DEC691600526649 /* Assets.xcassets in Resources */,
 				E2CE213C1DEC691600526649 /* Main.storyboard in Resources */,
 				A00B35491DEC7CF30078BD8E /* DriverTableViewCell.xib in Resources */,
@@ -303,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				E2CE21601DEC8D4600526649 /* SignUpViewController.swift in Sources */,
 				E2CE215A1DEC8B0C00526649 /* String+JSONStringToDictionary.swift in Sources */,
 				E2CE219C1DEC9B0300526649 /* LinkCarViewController.swift in Sources */,
@@ -310,14 +327,21 @@
 				E2CE216E1DEC903500526649 /* UIApplication+TopViewController.swift in Sources */,
 				E2CE215D1DEC8B0C00526649 /* UITextField+Padding.swift in Sources */,
 				E2CE21591DEC8B0C00526649 /* String+DataValidation.swift in Sources */,
+
+				A00B35531DEC993D0078BD8E /* SectionTableViewHeaderFooterView.swift in Sources */,
+
 				E2CE21371DEC691600526649 /* AppDelegate.swift in Sources */,
 				E235CA461DED962B0029BD03 /* Global.swift in Sources */,
 				A00B354A1DEC7CF30078BD8E /* SelectDriverViewController.swift in Sources */,
 				A00B35481DEC7CF30078BD8E /* DriverTableViewCell.swift in Sources */,
+
 				E2CE21691DEC8F6500526649 /* LogInViewController.swift in Sources */,
 				E2CE215C1DEC8B0C00526649 /* UIColor+Extensions.swift in Sources */,
 				E2CE216A1DEC8F6500526649 /* LogInViewController+UITextFieldDelegate.swift in Sources */,
 				E2CE21701DEC90B300526649 /* ActivityIndicatorView.swift in Sources */,
+
+				A0E0381F1DEDC18C0063B6D7 /* DriverNameCollectionViewCell.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
