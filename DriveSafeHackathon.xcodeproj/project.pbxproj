@@ -10,22 +10,50 @@
 		A00B35481DEC7CF30078BD8E /* DriverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B35451DEC7CF30078BD8E /* DriverTableViewCell.swift */; };
 		A00B35491DEC7CF30078BD8E /* DriverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00B35461DEC7CF30078BD8E /* DriverTableViewCell.xib */; };
 		A00B354A1DEC7CF30078BD8E /* SelectDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B35471DEC7CF30078BD8E /* SelectDriverViewController.swift */; };
+		BDFC69871F1E6B98B8A4A05E /* Pods_DriveSafeHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2F398BDC88308870AD0F0 /* Pods_DriveSafeHackathon.framework */; };
+		E235CA461DED962B0029BD03 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235CA451DED962B0029BD03 /* Global.swift */; };
 		E2CE21371DEC691600526649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE21361DEC691600526649 /* AppDelegate.swift */; };
 		E2CE213C1DEC691600526649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE213A1DEC691600526649 /* Main.storyboard */; };
 		E2CE213E1DEC691600526649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CE213D1DEC691600526649 /* Assets.xcassets */; };
 		E2CE214C1DEC7AA700526649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE214A1DEC7AA700526649 /* LaunchScreen.storyboard */; };
+		E2CE21591DEC8B0C00526649 /* String+DataValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE21541DEC8B0C00526649 /* String+DataValidation.swift */; };
+		E2CE215A1DEC8B0C00526649 /* String+JSONStringToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE21551DEC8B0C00526649 /* String+JSONStringToDictionary.swift */; };
+		E2CE215C1DEC8B0C00526649 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE21571DEC8B0C00526649 /* UIColor+Extensions.swift */; };
+		E2CE215D1DEC8B0C00526649 /* UITextField+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE21581DEC8B0C00526649 /* UITextField+Padding.swift */; };
+		E2CE21601DEC8D4600526649 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE215F1DEC8D4600526649 /* SignUpViewController.swift */; };
+		E2CE21691DEC8F6500526649 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE21671DEC8F6500526649 /* LogInViewController.swift */; };
+		E2CE216A1DEC8F6500526649 /* LogInViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE21681DEC8F6500526649 /* LogInViewController+UITextFieldDelegate.swift */; };
+		E2CE216C1DEC8FEE00526649 /* AlertGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE216B1DEC8FEE00526649 /* AlertGenerator.swift */; };
+		E2CE216E1DEC903500526649 /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE216D1DEC903500526649 /* UIApplication+TopViewController.swift */; };
+		E2CE21701DEC90B300526649 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE216F1DEC90B300526649 /* ActivityIndicatorView.swift */; };
+		E2CE219C1DEC9B0300526649 /* LinkCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE219B1DEC9B0300526649 /* LinkCarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		139EC6C9BF142559ABC699EE /* Pods-DriveSafeHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveSafeHackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon.release.xcconfig"; sourceTree = "<group>"; };
+		2B8B67533A274EE21C3E6CC0 /* Pods-DriveSafeHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveSafeHackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		A00B35451DEC7CF30078BD8E /* DriverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverTableViewCell.swift; sourceTree = "<group>"; };
 		A00B35461DEC7CF30078BD8E /* DriverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverTableViewCell.xib; sourceTree = "<group>"; };
 		A00B35471DEC7CF30078BD8E /* SelectDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverViewController.swift; sourceTree = "<group>"; };
+		E235CA451DED962B0029BD03 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		E2CE21331DEC691600526649 /* Drive Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drive Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CE21361DEC691600526649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CE213B1DEC691600526649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2CE213D1DEC691600526649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2CE21421DEC691600526649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2CE214B1DEC7AA700526649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2CE21541DEC8B0C00526649 /* String+DataValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+DataValidation.swift"; path = "Utils/String+DataValidation.swift"; sourceTree = "<group>"; };
+		E2CE21551DEC8B0C00526649 /* String+JSONStringToDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+JSONStringToDictionary.swift"; path = "Utils/String+JSONStringToDictionary.swift"; sourceTree = "<group>"; };
+		E2CE21571DEC8B0C00526649 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "Utils/UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		E2CE21581DEC8B0C00526649 /* UITextField+Padding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+Padding.swift"; path = "Utils/UITextField+Padding.swift"; sourceTree = "<group>"; };
+		E2CE215F1DEC8D4600526649 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "ViewControllers/Sign Up/SignUpViewController.swift"; sourceTree = "<group>"; };
+		E2CE21671DEC8F6500526649 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = "ViewControllers/Log In/LogInViewController.swift"; sourceTree = "<group>"; };
+		E2CE21681DEC8F6500526649 /* LogInViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LogInViewController+UITextFieldDelegate.swift"; path = "ViewControllers/Log In/LogInViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		E2CE216B1DEC8FEE00526649 /* AlertGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertGenerator.swift; path = Utils/AlertGenerator.swift; sourceTree = "<group>"; };
+		E2CE216D1DEC903500526649 /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIApplication+TopViewController.swift"; path = "Utils/UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
+		E2CE216F1DEC90B300526649 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityIndicatorView.swift; path = Utils/ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		E2CE219B1DEC9B0300526649 /* LinkCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkCarViewController.swift; path = "ViewControllers/Link Car/LinkCarViewController.swift"; sourceTree = "<group>"; };
+		FED2F398BDC88308870AD0F0 /* Pods_DriveSafeHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveSafeHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,12 +61,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDFC69871F1E6B98B8A4A05E /* Pods_DriveSafeHackathon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7969FFF14E20393151B51B75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FED2F398BDC88308870AD0F0 /* Pods_DriveSafeHackathon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A00B354B1DEC7CF80078BD8E /* SelectDriver */ = {
 			isa = PBXGroup;
 			children = (
@@ -49,11 +86,22 @@
 			name = SelectDriver;
 			sourceTree = "<group>";
 		};
+		D8D2E1B8588089BC5AADD0D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B8B67533A274EE21C3E6CC0 /* Pods-DriveSafeHackathon.debug.xcconfig */,
+				139EC6C9BF142559ABC699EE /* Pods-DriveSafeHackathon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E2CE212A1DEC691600526649 = {
 			isa = PBXGroup;
 			children = (
 				E2CE21351DEC691600526649 /* DriveSafeHackathon */,
 				E2CE21341DEC691600526649 /* Products */,
+				D8D2E1B8588089BC5AADD0D3 /* Pods */,
+				7969FFF14E20393151B51B75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,14 +116,66 @@
 		E2CE21351DEC691600526649 /* DriveSafeHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				E2CE214E1DEC7E7A00526649 /* ViewControllers */,
 				A00B354B1DEC7CF80078BD8E /* SelectDriver */,
+				E2CE21531DEC8AC800526649 /* Utils */,
 				E2CE21361DEC691600526649 /* AppDelegate.swift */,
+				E235CA451DED962B0029BD03 /* Global.swift */,
 				E2CE214A1DEC7AA700526649 /* LaunchScreen.storyboard */,
 				E2CE213A1DEC691600526649 /* Main.storyboard */,
 				E2CE213D1DEC691600526649 /* Assets.xcassets */,
 				E2CE21421DEC691600526649 /* Info.plist */,
 			);
 			path = DriveSafeHackathon;
+			sourceTree = "<group>";
+		};
+		E2CE214D1DEC7DEB00526649 /* Log In */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE21671DEC8F6500526649 /* LogInViewController.swift */,
+				E2CE21681DEC8F6500526649 /* LogInViewController+UITextFieldDelegate.swift */,
+			);
+			name = "Log In";
+			sourceTree = "<group>";
+		};
+		E2CE214E1DEC7E7A00526649 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE219A1DEC9AE300526649 /* Link Car */,
+				E2CE214D1DEC7DEB00526649 /* Log In */,
+				E2CE215E1DEC8D1B00526649 /* Sign Up */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E2CE21531DEC8AC800526649 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE216F1DEC90B300526649 /* ActivityIndicatorView.swift */,
+				E2CE216B1DEC8FEE00526649 /* AlertGenerator.swift */,
+				E2CE216D1DEC903500526649 /* UIApplication+TopViewController.swift */,
+				E2CE21541DEC8B0C00526649 /* String+DataValidation.swift */,
+				E2CE21551DEC8B0C00526649 /* String+JSONStringToDictionary.swift */,
+				E2CE21571DEC8B0C00526649 /* UIColor+Extensions.swift */,
+				E2CE21581DEC8B0C00526649 /* UITextField+Padding.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		E2CE215E1DEC8D1B00526649 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE215F1DEC8D4600526649 /* SignUpViewController.swift */,
+			);
+			name = "Sign Up";
+			sourceTree = "<group>";
+		};
+		E2CE219A1DEC9AE300526649 /* Link Car */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE219B1DEC9B0300526649 /* LinkCarViewController.swift */,
+			);
+			name = "Link Car";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2CE21451DEC691600526649 /* Build configuration list for PBXNativeTarget "DriveSafeHackathon" */;
 			buildPhases = (
+				65D610B592C03E1D028F1BA0 /* [CP] Check Pods Manifest.lock */,
 				E2CE212F1DEC691600526649 /* Sources */,
 				E2CE21301DEC691600526649 /* Frameworks */,
 				E2CE21311DEC691600526649 /* Resources */,
+				ED508774D2499A092D58C82D /* [CP] Embed Pods Frameworks */,
+				952313A9BB22D6D7E3642133 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,14 +250,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65D610B592C03E1D028F1BA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		952313A9BB22D6D7E3642133 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED508774D2499A092D58C82D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E2CE212F1DEC691600526649 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2CE21601DEC8D4600526649 /* SignUpViewController.swift in Sources */,
+				E2CE215A1DEC8B0C00526649 /* String+JSONStringToDictionary.swift in Sources */,
+				E2CE219C1DEC9B0300526649 /* LinkCarViewController.swift in Sources */,
+				E2CE216C1DEC8FEE00526649 /* AlertGenerator.swift in Sources */,
+				E2CE216E1DEC903500526649 /* UIApplication+TopViewController.swift in Sources */,
+				E2CE215D1DEC8B0C00526649 /* UITextField+Padding.swift in Sources */,
+				E2CE21591DEC8B0C00526649 /* String+DataValidation.swift in Sources */,
 				E2CE21371DEC691600526649 /* AppDelegate.swift in Sources */,
+				E235CA461DED962B0029BD03 /* Global.swift in Sources */,
 				A00B354A1DEC7CF30078BD8E /* SelectDriverViewController.swift in Sources */,
 				A00B35481DEC7CF30078BD8E /* DriverTableViewCell.swift in Sources */,
+				E2CE21691DEC8F6500526649 /* LogInViewController.swift in Sources */,
+				E2CE215C1DEC8B0C00526649 /* UIColor+Extensions.swift in Sources */,
+				E2CE216A1DEC8F6500526649 /* LogInViewController+UITextFieldDelegate.swift in Sources */,
+				E2CE21701DEC90B300526649 /* ActivityIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +438,7 @@
 		};
 		E2CE21461DEC691600526649 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8B67533A274EE21C3E6CC0 /* Pods-DriveSafeHackathon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C35G5EW7P5;
@@ -289,6 +453,7 @@
 		};
 		E2CE21471DEC691600526649 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 139EC6C9BF142559ABC699EE /* Pods-DriveSafeHackathon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C35G5EW7P5;

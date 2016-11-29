@@ -63,3 +63,39 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+Pods/Manifest.lock
+Pods/Alamofire/LICENSE
+Pods/Alamofire/README.md
+Pods/Alamofire/Source/AFError.swift
+Pods/Alamofire/Source/Alamofire.swift
+Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+Pods/Alamofire/Source/MultipartFormData.swift
+Pods/Alamofire/Source/NetworkReachabilityManager.swift
+Pods/Alamofire/Source/Notifications.swift
+Pods/Alamofire/Source/ParameterEncoding.swift
+Pods/Alamofire/Source/Request.swift
+Pods/Alamofire/Source/Response.swift
+Pods/Alamofire/Source/ResponseSerialization.swift
+Pods/Alamofire/Source/Result.swift
+Pods/Alamofire/Source/ServerTrustPolicy.swift
+Pods/Alamofire/Source/SessionDelegate.swift
+Pods/Alamofire/Source/SessionManager.swift
+Pods/Alamofire/Source/TaskDelegate.swift
+Pods/Alamofire/Source/Timeline.swift
+Pods/Alamofire/Source/Validation.swift
+Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+Pods/Target Support Files/Alamofire/Alamofire.modulemap
+Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+Pods/Target Support Files/Alamofire/Info.plist
+Pods/Target Support Files/Pods-DriveSafeHackathon/Info.plist
+Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon-acknowledgements.markdown
+Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon-acknowledgements.plist
+Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon-dummy.m
+Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon-frameworks.sh
+Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon-resources.sh
+Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon-umbrella.h
+Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon.debug.xcconfig
+Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon.modulemap
+Pods/Target Support Files/Pods-DriveSafeHackathon/Pods-DriveSafeHackathon.release.xcconfig
