@@ -46,9 +46,9 @@ class SelectDriverViewController: UIViewController
         
         let nib2 = UINib(nibName: "DriverTableViewCell", bundle: nil)
         tripTableView.register(nib2, forCellReuseIdentifier: "DriverTableViewCell")
-        
-        
-
+		
+		tripTableView.backgroundColor = UIColor(red: 248.0/255.0, green: 248.0/255.0, blue: 248.0/255.0, alpha: 1.0)
+		
         getAllTrip()
         
         loadDrivernameOnScrollView()
@@ -63,15 +63,14 @@ class SelectDriverViewController: UIViewController
         for name in drivers {
             
             let btn: UIButton = UIButton(frame: CGRect(x: 100*i, y: 0, width: 100, height: 60))
-            btn.backgroundColor = hexStringToUIColor(hex:"FFFFFF")
+            btn.backgroundColor = UIColor.white
             btn.setTitle(name, for: .normal)
             btn.addTarget(self, action: #selector(filtreByName(sender:)), for: .touchUpInside)
             btn.tag = i
             btn.setTitleColor(#colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1), for: UIControlState.normal)
             
             driverNameScrollView.addSubview(btn)
-            
-            
+			
             i += 1
         }
         
@@ -94,10 +93,15 @@ class SelectDriverViewController: UIViewController
         
         let url = URL(string: serverURL + reportService)
         let params = [String: String]()
-        
+		
+		let activityIndicatorView = ActivityIndicatorView()
+		activityIndicatorView.show(onView: self.view)
+		
         Alamofire
             .request(url!, method: .get, parameters: params, encoding: JSONEncoding.default)
             .responseString { response in
+				
+				activityIndicatorView.hide()
                 
                 let result = response.result
                 
@@ -138,9 +142,6 @@ class SelectDriverViewController: UIViewController
 		if segue.identifier != "tripAnalysisSegue" { return }
 		
 		if let trips = self.allTrips["reports"] as? [JSONDictionary] {
-			
-//			let viewController = (segue.destination as? UINavigationController)?.topViewController
-			
 			if segue.destination is TripAnalysisViewController {
 				let tripAnalysisViewController = segue.destination as! TripAnalysisViewController
 				tripAnalysisViewController.tripDictionary = trips[selectedIndex]
@@ -185,14 +186,15 @@ class SelectDriverViewController: UIViewController
         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DriverTableViewCell", for: indexPath) as! DriverTableViewCell
-        let speedScore = report["speedScore"] as! JSONDictionary
-        
-        cell.percentLbl.text = "00"
-        
-        if let mark = speedScore["mark"] as? Int {
-            
-            cell.percentLbl.text = String(mark)+"%"
-        }
+        let finalScoreDict = report["finalScore"] as! JSONDictionary
+		
+        if let mark = finalScoreDict["mark"] as? Int {
+            cell.percentLbl.text = String(mark) + "%"
+		} else {
+			cell.percentLbl.text = "N/A"
+		}
+		
+		cell.percentLbl.backgroundColor = UIColor.driveSafeColor(string: finalScoreDict["color"] as? String)
         
         let trip = report["trip"] as! JSONDictionary
         let startDate = trip["startDate"] as! JSONDictionary
@@ -224,37 +226,13 @@ class SelectDriverViewController: UIViewController
             }else{
                 
                 cell.pseudoLbl.text = String(describing:name)
-                
-                /*
-                let _url = NSURL(string: String(describing:driver["picUrl"]!)) as! URL
-                let dataTask = URLSession.shared.dataTask(with: _url) {
-                    data, response, error in
-                    if error == nil {
-                        if let  data = data,
-                            let image = UIImage(data: data) {
-                            
-                            cell.avatarImgView.image = image
-                            //self.tripTableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
-                        }
-                    } else {
-                        //reject(error as! NSError)
-                    }
-                }
-                dataTask.resume()
-                 */
+			
                 let url = URL(string: String(describing:driver["picUrl"]!))
                 let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
                 cell.avatarImgView.image = UIImage(data: data!)
-                
-                
             }
-        }
-        
-        
-        
-        
-        
-        
+		}
+		
         return cell
     }
     
@@ -269,50 +247,10 @@ class SelectDriverViewController: UIViewController
         
         return 1
     }
-    
-    
-    
-    
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-        
-        if (cString.hasPrefix("#")) {
-            cString.remove(at: cString.startIndex)
-        }
-        
-        if ((cString.characters.count) != 6) {
-            return UIColor.gray
-        }
-        
-        var rgbValue:UInt32 = 0
-        Scanner(string: cString).scanHexInt32(&rgbValue)
-        
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
-    }
-    
-    
-    
-    
-    
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
