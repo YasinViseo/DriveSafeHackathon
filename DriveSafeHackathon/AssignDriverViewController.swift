@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class AddDriverViewController: UIViewController
+class AssignDriverViewController: UIViewController
     ,UITableViewDataSource,UITableViewDelegate
 
 {

@@ -347,7 +347,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bBy-f4-wbw" id="NbV-aI-Ggq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -355,7 +355,7 @@
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bSY-yr-h5k" id="UHe-tJ-CAs">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -384,10 +384,10 @@
             </objects>
             <point key="canvasLocation" x="556" y="865.81709145427294"/>
         </scene>
-        <!--Add Driver View Controller-->
+        <!--Assign Driver View Controller-->
         <scene sceneID="fct-zI-Rdi">
             <objects>
-                <viewController storyboardIdentifier="AddDriverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJh-ND-87d" customClass="AddDriverViewController" customModule="DriveSafe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AssignDriverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJh-ND-87d" customClass="AssignDriverViewController" customModule="DriveSafe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xfd-J3-lkP"/>
                         <viewControllerLayoutGuide type="bottom" id="i98-Cs-kVf"/>

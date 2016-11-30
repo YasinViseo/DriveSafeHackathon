@@ -16,7 +16,7 @@
 		A0E3B2751DEEE51900127697 /* AddDriverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E3B2731DEEE51900127697 /* AddDriverTableViewCell.xib */; };
 		A0E3B2781DEEE6D300127697 /* AddDriverButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3B2761DEEE6D300127697 /* AddDriverButtonTableViewCell.swift */; };
 		A0E3B2791DEEE6D300127697 /* AddDriverButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E3B2771DEEE6D300127697 /* AddDriverButtonTableViewCell.xib */; };
-		A0E3B27B1DEEE7B100127697 /* AddDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3B27A1DEEE7B100127697 /* AddDriverViewController.swift */; };
+		A0E3B27B1DEEE7B100127697 /* AssignDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3B27A1DEEE7B100127697 /* AssignDriverViewController.swift */; };
 		A0E3B27E1DEEE81D00127697 /* CloseAddDriverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3B27C1DEEE81D00127697 /* CloseAddDriverTableViewCell.swift */; };
 		A0E3B27F1DEEE81D00127697 /* CloseAddDriverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E3B27D1DEEE81D00127697 /* CloseAddDriverTableViewCell.xib */; };
 		BDFC69871F1E6B98B8A4A05E /* Pods_DriveSafeHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2F398BDC88308870AD0F0 /* Pods_DriveSafeHackathon.framework */; };
@@ -50,7 +50,7 @@
 		A0E3B2731DEEE51900127697 /* AddDriverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddDriverTableViewCell.xib; sourceTree = "<group>"; };
 		A0E3B2761DEEE6D300127697 /* AddDriverButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDriverButtonTableViewCell.swift; sourceTree = "<group>"; };
 		A0E3B2771DEEE6D300127697 /* AddDriverButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddDriverButtonTableViewCell.xib; sourceTree = "<group>"; };
-		A0E3B27A1DEEE7B100127697 /* AddDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDriverViewController.swift; sourceTree = "<group>"; };
+		A0E3B27A1DEEE7B100127697 /* AssignDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignDriverViewController.swift; sourceTree = "<group>"; };
 		A0E3B27C1DEEE81D00127697 /* CloseAddDriverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseAddDriverTableViewCell.swift; sourceTree = "<group>"; };
 		A0E3B27D1DEEE81D00127697 /* CloseAddDriverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CloseAddDriverTableViewCell.xib; sourceTree = "<group>"; };
 		E235CA451DED962B0029BD03 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				A0E3B2731DEEE51900127697 /* AddDriverTableViewCell.xib */,
 				A0E3B2761DEEE6D300127697 /* AddDriverButtonTableViewCell.swift */,
 				A0E3B2771DEEE6D300127697 /* AddDriverButtonTableViewCell.xib */,
-				A0E3B27A1DEEE7B100127697 /* AddDriverViewController.swift */,
+				A0E3B27A1DEEE7B100127697 /* AssignDriverViewController.swift */,
 				A0E3B27C1DEEE81D00127697 /* CloseAddDriverTableViewCell.swift */,
 				A0E3B27D1DEEE81D00127697 /* CloseAddDriverTableViewCell.xib */,
 			);
@@ -348,7 +348,7 @@
 				A0E3B2741DEEE51900127697 /* AddDriverTableViewCell.swift in Sources */,
 				E2CE216C1DEC8FEE00526649 /* AlertGenerator.swift in Sources */,
 				E2CE216E1DEC903500526649 /* UIApplication+TopViewController.swift in Sources */,
-				A0E3B27B1DEEE7B100127697 /* AddDriverViewController.swift in Sources */,
+				A0E3B27B1DEEE7B100127697 /* AssignDriverViewController.swift in Sources */,
 				E2CE215D1DEC8B0C00526649 /* UITextField+Padding.swift in Sources */,
 				E2CE21591DEC8B0C00526649 /* String+DataValidation.swift in Sources */,
 				A00B35531DEC993D0078BD8E /* SectionTableViewHeaderFooterView.swift in Sources */,
