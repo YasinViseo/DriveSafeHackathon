@@ -409,6 +409,7 @@
                         <outlet property="nameTextField" destination="bFh-tw-0z2" id="hB3-Pq-fow"/>
                         <outlet property="profileImageView" destination="t1n-OA-IFh" id="8l3-wx-mIv"/>
                         <outlet property="removeButton" destination="tMi-Nd-a2U" id="eLz-I5-iEA"/>
+                        <segue destination="yRn-Cn-1ff" kind="show" identifier="tripAnalysisSegue" id="bSm-xo-jkI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3i5-Ie-eZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -424,10 +425,10 @@
         <scene sceneID="WWO-9m-X3J">
             <objects>
                 <tableViewController id="yOK-G4-Bfg" customClass="TripAnalysisViewController" customModule="Drive_Safe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="220" sectionHeaderHeight="18" sectionFooterHeight="18" id="Wax-mI-kOg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wax-mI-kOg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.54390446280000004" green="0.59999999999999998" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <sections/>
                         <connections>
@@ -435,10 +436,27 @@
                             <outlet property="delegate" destination="yOK-G4-Bfg" id="J2s-32-Ubk"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Hf2-9N-T72"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHt-OM-6jj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3483" y="425"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rS6-qg-pdB">
+            <objects>
+                <navigationController id="yRn-Cn-1ff" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="if3-So-Gdt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yOK-G4-Bfg" kind="relationship" relationship="rootViewController" id="6pE-88-6vj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWb-i0-ipu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2425" y="1134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="evQ-D7-jeP">
