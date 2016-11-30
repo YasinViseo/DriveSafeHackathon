@@ -22,6 +22,7 @@ class SelectDriverViewController: UIViewController
     @IBOutlet weak var tripTableView: UITableView!
     
     var allTrips: Dictionary  = [String: Any?]()
+    var reports: NSArray = []
 	//    var reports: NSArray = [Dictionary]
 	var selectedIndex = 0
     
@@ -62,7 +63,7 @@ class SelectDriverViewController: UIViewController
         
         for name in drivers {
             
-            let btn: UIButton = UIButton(frame: CGRect(x: 100*i, y: 0, width: 100, height: 60))
+            let btn: UIButton = UIButton(frame: CGRect(x: 100*i, y: -60, width: 100, height: 60))
             btn.backgroundColor = hexStringToUIColor(hex:"FFFFFF")
             btn.setTitle(name, for: .normal)
             btn.addTarget(self, action: #selector(filtreByName(sender:)), for: .touchUpInside)
@@ -75,7 +76,8 @@ class SelectDriverViewController: UIViewController
             i += 1
         }
         
-        driverNameScrollView.contentSize = CGSize(width:100*i, height:60)
+        print(driverNameScrollView.contentSize.height)
+        driverNameScrollView.contentSize = CGSize(width:100*i, height:0)
 		
         
     }
@@ -112,9 +114,10 @@ class SelectDriverViewController: UIViewController
                     
                     self.allTrips = JSON.JSONStringToDictionary()!
                     
-                    let reports = self.allTrips["reports"] as! NSArray
+                    self.reports = self.allTrips["reports"] as! NSArray
                     
-                    print(reports[0])
+                    print(self.reports[0])
+                    print(self.reports.count)
                     
                     self.tripTableView.reloadData()
 
@@ -159,7 +162,7 @@ class SelectDriverViewController: UIViewController
 		//let reports = self.allTrips["reports"] as! NSArray
 
 		
-        return allTrips.count
+        return reports.count
     }
 
     /*
@@ -185,11 +188,11 @@ class SelectDriverViewController: UIViewController
         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DriverTableViewCell", for: indexPath) as! DriverTableViewCell
-        let speedScore = report["speedScore"] as! JSONDictionary
+        let finalScore = report["finalScore"] as! JSONDictionary
         
         cell.percentLbl.text = "00"
         
-        if let mark = speedScore["mark"] as? Int {
+        if let mark = finalScore["mark"] as? Int {
             
             cell.percentLbl.text = String(mark)+"%"
         }
@@ -225,23 +228,7 @@ class SelectDriverViewController: UIViewController
                 
                 cell.pseudoLbl.text = String(describing:name)
                 
-                /*
-                let _url = NSURL(string: String(describing:driver["picUrl"]!)) as! URL
-                let dataTask = URLSession.shared.dataTask(with: _url) {
-                    data, response, error in
-                    if error == nil {
-                        if let  data = data,
-                            let image = UIImage(data: data) {
-                            
-                            cell.avatarImgView.image = image
-                            //self.tripTableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
-                        }
-                    } else {
-                        //reject(error as! NSError)
-                    }
-                }
-                dataTask.resume()
-                 */
+                
                 let url = URL(string: String(describing:driver["picUrl"]!))
                 let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
                 cell.avatarImgView.image = UIImage(data: data!)
@@ -250,9 +237,13 @@ class SelectDriverViewController: UIViewController
             }
         }
         
-        
-        
-        
+        if String(describing:finalScore["color"]!) == "YELLOW"{
+            cell.percentLbl.backgroundColor = #colorLiteral(red: 1, green: 0.8002882004, blue: 0.004029067233, alpha: 1)
+        }else if String(describing:finalScore["color"]!) == "RED"{
+            cell.percentLbl.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        }else if String(describing:finalScore["color"]!) == "GREEN"{
+            cell.percentLbl.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        }
         
         
         return cell
