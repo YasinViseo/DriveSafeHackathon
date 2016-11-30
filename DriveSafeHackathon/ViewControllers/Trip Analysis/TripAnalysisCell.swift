@@ -87,7 +87,7 @@ class TripAnalysisCell: UITableViewCell {
 			resultLabel.text = "N/A"
 		}
 		
-		resultLabel.backgroundColor = colorFromString(data["color"] as? String)
+		resultLabel.backgroundColor = UIColor.driveSafeColor(string: data["color"] as? String)
 		
 		if let title = data["commentTitle"] as? String {
 			commentTitleLabel.isHidden = false
@@ -104,17 +104,6 @@ class TripAnalysisCell: UITableViewCell {
 		}
 		
 		advicesButton.isHidden = commentTitleLabel.isHidden && commentBodyLabel.isHidden
-	}
-	
-	func colorFromString(_ color: String?) -> UIColor {
-		guard let color = color else { return UIColor.gray }
-		
-		switch color {
-		case "YELLOW": return UIColor(red: 232.0/255.0, green: 215.0/255.0, blue: 22.0/255.0, alpha: 1.0)
-		case "RED": return UIColor(red: 216.0/255.0, green: 47.0/255.0, blue: 44.0/255.0, alpha: 1.0)
-		case "GREEN": return UIColor(red: 67.0/255.0, green: 207.0/255.0, blue: 35.0/255.0, alpha: 1.0)
-		default: return UIColor.gray
-		}
 	}
 	
 	@IBAction func toggleAdvices(_ sender: Any) {

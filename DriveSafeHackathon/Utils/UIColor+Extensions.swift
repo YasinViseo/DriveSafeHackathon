@@ -28,4 +28,15 @@ extension UIColor {
     static func error() -> UIColor {
         return UIColor(red: 1.0, green: 175.0/255.0, blue: 155.0/255.0, alpha: 1.0)
     }
+	
+	static func driveSafeColor(string color: String?) -> UIColor {
+		guard let color = color else { return UIColor.gray }
+		
+		switch color {
+		case "YELLOW": return UIColor(red: 232.0/255.0, green: 215.0/255.0, blue: 22.0/255.0, alpha: 1.0)
+		case "RED": return UIColor(red: 216.0/255.0, green: 47.0/255.0, blue: 44.0/255.0, alpha: 1.0)
+		case "GREEN": return UIColor(red: 67.0/255.0, green: 207.0/255.0, blue: 35.0/255.0, alpha: 1.0)
+		default: return UIColor.gray
+		}
+	}
 }
