@@ -347,7 +347,7 @@
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -419,6 +419,26 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2424.8000000000002" y="429.53523238380814"/>
+        </scene>
+        <!--Trip Analysis View Controller-->
+        <scene sceneID="WWO-9m-X3J">
+            <objects>
+                <tableViewController id="yOK-G4-Bfg" customClass="TripAnalysisViewController" customModule="Drive_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="220" sectionHeaderHeight="18" sectionFooterHeight="18" id="Wax-mI-kOg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.54390446280000004" green="0.59999999999999998" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="yOK-G4-Bfg" id="N1w-ex-Akh"/>
+                            <outlet property="delegate" destination="yOK-G4-Bfg" id="J2s-32-Ubk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rHt-OM-6jj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3483" y="425"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="evQ-D7-jeP">

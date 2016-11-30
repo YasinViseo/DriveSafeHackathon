@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 let serverURL = "http://10.33.171.173:8080/drive-safe"
-let reportService = "/reports"
+let reportService = "drive-safe/reports"
 let loginService = "/user/login"
 let linkCarService = "/user/attach-car"
 let kidsListService = "/kid/list"
