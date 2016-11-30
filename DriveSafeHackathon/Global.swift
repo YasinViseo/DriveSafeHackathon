@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 let serverURL = "http://10.33.171.173:8080"
-let reportService = "/reports"
-let loginService = "/user/login"
-let linkCarService = "/user/attach-car"
-let kidsListService = "/kid/list"
+let reportService = "/drive-safe/reports"
+let loginService = "/drive-safe//user/login"
+let linkCarService = "/drive-safe//user/attach-car"
+let kidsListService = "/drive-safe/kid/list"
 
 let testEmail = "dinghao.hu@viseo.com"
 let testPassword = "secret"

@@ -30,7 +30,7 @@
         <!--Log In View Controller-->
         <scene sceneID="VyW-nY-WDl">
             <objects>
-                <viewController id="Ic6-du-hgm" customClass="LogInViewController" customModule="Drive_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ic6-du-hgm" customClass="LogInViewController" customModule="DriveSafe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cwv-9K-ab6"/>
                         <viewControllerLayoutGuide type="bottom" id="cdw-r5-xEN"/>
@@ -137,7 +137,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="yoF-a4-8Kk">
             <objects>
-                <viewController id="W8V-fm-gDD" customClass="SignUpViewController" customModule="Drive_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="W8V-fm-gDD" customClass="SignUpViewController" customModule="DriveSafe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="odF-ry-gZN"/>
                         <viewControllerLayoutGuide type="bottom" id="WJG-JR-HYu"/>
@@ -242,7 +242,7 @@
         <!--Link Car View Controller-->
         <scene sceneID="iei-uQ-ntS">
             <objects>
-                <viewController id="1f3-MA-fMy" customClass="LinkCarViewController" customModule="Drive_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1f3-MA-fMy" customClass="LinkCarViewController" customModule="DriveSafe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Umc-pz-a8B"/>
                         <viewControllerLayoutGuide type="bottom" id="jEY-sl-e5u"/>
@@ -329,7 +329,7 @@
         <!--Select Driver View Controller-->
         <scene sceneID="nye-Qp-hx2">
             <objects>
-                <viewController id="J1W-uL-73W" customClass="SelectDriverViewController" customModule="Drive_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J1W-uL-73W" customClass="SelectDriverViewController" customModule="DriveSafe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ddA-cP-xFj"/>
                         <viewControllerLayoutGuide type="bottom" id="GR3-wx-TU0"/>
@@ -338,47 +338,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X2R-Lz-f7x">
-                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QkU-bf-K5M">
-                                    <size key="itemSize" width="100" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DriverName" id="EHb-9J-Dov">
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="J1W-uL-73W" id="nPd-gD-Clv"/>
-                                    <outlet property="delegate" destination="J1W-uL-73W" id="f3n-3I-fpj"/>
-                                </connections>
-                            </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bkv-Pn-TN2">
                                 <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SectionTableViewCell" id="bBy-f4-wbw" customClass="SectionTableViewCell" customModule="Drive_Safe" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SectionTableViewCell" id="bBy-f4-wbw" customClass="SectionTableViewCell" customModule="DriveSafe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bBy-f4-wbw" id="NbV-aI-Ggq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DriverTableViewCell" id="bSY-yr-h5k" customClass="DriverTableViewCell" customModule="Drive_Safe" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DriverTableViewCell" id="bSY-yr-h5k" customClass="DriverTableViewCell" customModule="DriveSafe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bSY-yr-h5k" id="UHe-tJ-CAs">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -389,18 +366,81 @@
                                     <outlet property="delegate" destination="J1W-uL-73W" id="WQe-no-CVG"/>
                                 </connections>
                             </tableView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6m-u0-JMI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.96078431372549022" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cu0-Q0-6B2"/>
                     <connections>
-                        <outlet property="filtreCollectionView" destination="X2R-Lz-f7x" id="Zjv-4t-dT0"/>
+                        <outlet property="driverNameScrollView" destination="b6m-u0-JMI" id="yeD-2c-9fp"/>
                         <outlet property="tripTableView" destination="Bkv-Pn-TN2" id="5Cr-zC-uQU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXI-eq-uX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="556" y="865.81709145427294"/>
+        </scene>
+        <!--Add Driver View Controller-->
+        <scene sceneID="fct-zI-Rdi">
+            <objects>
+                <viewController storyboardIdentifier="AddDriverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJh-ND-87d" customClass="AddDriverViewController" customModule="DriveSafe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xfd-J3-lkP"/>
+                        <viewControllerLayoutGuide type="bottom" id="i98-Cs-kVf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6ES-9C-sGR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mdj-Kq-0U7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddDriverTableViewCell" id="AY9-Yd-8P6">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AY9-Yd-8P6" id="7b5-Sl-P1u">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddDriverButtonTableViewCell" id="dsC-cz-mBQ">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsC-cz-mBQ" id="iRN-xU-2JY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CloseAddDriverTableViewCell" id="JSS-BC-aXu">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JSS-BC-aXu" id="J2H-Jv-aFT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YJh-ND-87d" id="gVX-vb-pIg"/>
+                                    <outlet property="delegate" destination="YJh-ND-87d" id="VCc-tR-9yP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="Mdj-Kq-0U7" id="1l3-mb-L2l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHc-Zl-alU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376.8" y="1085.3073463268368"/>
         </scene>
     </scenes>
     <resources>

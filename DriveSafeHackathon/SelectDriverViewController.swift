@@ -7,17 +7,25 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class SelectDriverViewController: UIViewController
                             ,UITableViewDataSource,UITableViewDelegate
-                            ,UICollectionViewDataSource,UICollectionViewDelegate{
+                            //,UICollectionViewDataSource,UICollectionViewDelegate
+{
 
     
-    
-    @IBOutlet weak var filtreCollectionView: UICollectionView!
+    @IBOutlet weak var driverNameScrollView: UIScrollView!
+
+    //@IBOutlet weak var filtreCollectionView: UICollectionView!
     @IBOutlet weak var tripTableView: UITableView!
     
-    var drivers: [String] = ["All", "Unassigned", "Kevin", "Léa", "Marcel"]
+    var allTrips: Dictionary  = [String: Any?]()
+//    var reports: NSArray = [Dictionary]
+
+    
+    var drivers: [String] = ["All", "Unassigned", "Kevin", "Léa", "Marcel","Bernard"]
     
     
     override func viewDidLoad() {
@@ -25,11 +33,12 @@ class SelectDriverViewController: UIViewController
 
         print("viewDidLoad")
         
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.barTintColor = UIColor.driveSafePink()
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName: UIColor.white]
         
-        //let layout = UICollectionViewFlowLayout()
-        //layout.scrollDirection = UICollectionViewScrollDirection.vertical
-        //filtreCollectionView.collectionViewLayout = layout
-        
+        self.title = "TRIPS"
         
         let nib = UINib(nibName: "SectionTableViewHeaderFooterView", bundle: nil)
         tripTableView.register(nib, forHeaderFooterViewReuseIdentifier: "SectionTableViewHeaderFooterView")
@@ -38,13 +47,91 @@ class SelectDriverViewController: UIViewController
         let nib2 = UINib(nibName: "DriverTableViewCell", bundle: nil)
         tripTableView.register(nib2, forCellReuseIdentifier: "DriverTableViewCell")
         
+        
 
-        filtreCollectionView.reloadData()
-        tripTableView.reloadData()
+        getAllTrip()
+        
+        loadDrivernameOnScrollView()
+        
+        
         
     }
 
     
+    func loadDrivernameOnScrollView(){
+        
+        var i = 0
+        
+        for name in drivers {
+            
+            let btn: UIButton = UIButton(frame: CGRect(x: 100*i, y: 0, width: 100, height: 60))
+            btn.backgroundColor = hexStringToUIColor(hex:"FFFFFF")
+            btn.setTitle(name, for: .normal)
+            btn.addTarget(self, action: #selector(filtreByName(sender:)), for: .touchUpInside)
+            btn.tag = i
+            btn.setTitleColor(#colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1), for: UIControlState.normal)
+            
+            driverNameScrollView.addSubview(btn)
+            
+            
+            i += 1
+        }
+        
+        driverNameScrollView.contentSize = CGSize(width:100*i, height:60)
+        
+        
+    }
+    
+    
+    func filtreByName(sender: UIButton!) {
+        
+        print("filtreByName \(sender)")
+        let btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1 {
+            //do anything here
+        }
+    }
+
+    func getAllTrip(){
+        
+        let url = URL(string: serverURL + reportService)
+        let params = [String: String]()
+        
+        Alamofire
+            .request(url!, method: .get, parameters: params, encoding: JSONEncoding.default)
+            .responseString { response in
+                
+                let result = response.result
+                
+                if (result.isFailure) {
+                    
+                    return
+                }
+                
+                if let JSON = response.result.value {
+                    
+                    //print("JSON: \(JSON)")
+                    
+                    self.allTrips = JSON.JSONStringToDictionary()!
+                    
+                    let reports = self.allTrips["reports"] as! NSArray
+                    
+                    print(reports[0])
+                    
+                    self.tripTableView.reloadData()
+
+                }
+        }
+        
+        
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -54,36 +141,101 @@ class SelectDriverViewController: UIViewController
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        return allTrips.count
     }
 
+    /*
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         print("viewForHeaderInSection")
         
-        
         let cell = tripTableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionTableViewHeaderFooterView") as! SectionTableViewHeaderFooterView
         cell.tripDayLbl.text = "date trip"
-        
-        
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTableViewCell", for: indexPath) as! SectionTableViewCell
-
-        
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTableViewCell") as! SectionTableViewCell
-        
-        //cell.backgroundColor = UIColor.blue
         
         return cell
         
         
     }
-    
+    */
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         print("cellForRowAt")
         
+        let reports = self.allTrips["reports"] as! NSArray
+        var report = reports[indexPath.row] as! JSONDictionary//[String: Any?]()
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "DriverTableViewCell", for: indexPath) as! DriverTableViewCell
+        let speedScore = report["speedScore"] as! JSONDictionary
+        
+        cell.percentLbl.text = "00"
+        
+        if let mark = speedScore["mark"] as? Int {
+            
+            cell.percentLbl.text = String(mark)+"%"
+        }
+        
+        let trip = report["trip"] as! JSONDictionary
+        let startDate = trip["startDate"] as! JSONDictionary
+        let endDate = trip["endDate"] as! JSONDictionary
+        
+        let dateEnd = String(describing:endDate["dayOfMonth"]!)+"."+String(describing:endDate["monthValue"]!)+"."+String(describing:endDate["year"]!)
+        cell.dateEndLbl.text = dateEnd
+        
+        let timeEnd = String(describing:endDate["minute"]!)+":"+String(describing:endDate["hour"]!)
+        cell.timeEndLbl.text = timeEnd
+
+        let dateStart = String(describing:startDate["dayOfMonth"]!)+"."+String(describing:startDate["monthValue"]!)+"."+String(describing:startDate["year"]!)
+        cell.dateStartLbl.text = dateStart
+        
+        let timeStart = String(describing:endDate["minute"]!)+":"+String(describing:endDate["hour"]!)
+        cell.timeStartLbl.text = timeStart
+        
+        
+        let driver = report["driver"] as! JSONDictionary
+
+        if let name = driver["name"] {
+            
+            if String(describing:name) == "Unknown driver"{
+                
+                cell.pseudoLbl.alpha = 0
+                cell.avatarImgView.alpha = 0
+                cell.addDriverBtn.alpha = 1
+                
+            }else{
+                
+                cell.pseudoLbl.text = String(describing:name)
+                
+                /*
+                let _url = NSURL(string: String(describing:driver["picUrl"]!)) as! URL
+                let dataTask = URLSession.shared.dataTask(with: _url) {
+                    data, response, error in
+                    if error == nil {
+                        if let  data = data,
+                            let image = UIImage(data: data) {
+                            
+                            cell.avatarImgView.image = image
+                            //self.tripTableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
+                        }
+                    } else {
+                        //reject(error as! NSError)
+                    }
+                }
+                dataTask.resume()
+                 */
+                let url = URL(string: String(describing:driver["picUrl"]!))
+                let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+                cell.avatarImgView.image = UIImage(data: data!)
+                
+                
+            }
+        }
+        
+        
+        
+        
+        
         
         return cell
     }
@@ -94,46 +246,36 @@ class SelectDriverViewController: UIViewController
         
         return 80
     }
-    
+    /*
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         return 40
+    }*/
+    
+    
+    
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
-    
-    
-    
-    
-    
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        print("cellFornumberOfItemsInSectionRowAt \(drivers.count)")
-
-        return drivers.count
-    }
-    
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        print("UICollectionView cellForItemAt")
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DriverName",for: indexPath) as! DriverNameCollectionViewCell
-        
-        cell.backgroundColor = UIColor.black
-        
-        return cell
-    }
-    
-
-    
-    
-    
-    
     
     
     

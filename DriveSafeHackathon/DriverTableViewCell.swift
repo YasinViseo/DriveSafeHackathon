@@ -19,6 +19,9 @@ class DriverTableViewCell: UITableViewCell {
     @IBOutlet weak var timeEndLbl: UILabel!
     @IBOutlet weak var percentLbl: UILabel!
     
+    @IBOutlet weak var addDriverBtn: UIButton!
+    
+    var hasDriverAssigned: Bool = false
     
     
     override func awakeFromNib() {

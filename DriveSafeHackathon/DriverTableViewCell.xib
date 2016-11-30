@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverTableViewCell" rowHeight="80" id="KGk-i7-Jjw" customClass="DriverTableViewCell" customModule="Drive_Safe" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverTableViewCell" rowHeight="80" id="KGk-i7-Jjw" customClass="DriverTableViewCell" customModule="DriveSafe" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -78,11 +78,16 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlu-nX-fR8">
                         <rect key="frame" x="8" y="10" width="60" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="0.18823529411764706" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
+                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiz-LJ-rdD">
+                        <rect key="frame" x="6" y="16" width="117" height="47"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" backgroundImage="add_driver"/>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="addDriverBtn" destination="tiz-LJ-rdD" id="q0u-vf-QOi"/>
                 <outlet property="avatarImgView" destination="vlu-nX-fR8" id="eWZ-gr-uij"/>
                 <outlet property="dateEndLbl" destination="ReC-Lw-WA4" id="T7L-Az-DYb"/>
                 <outlet property="dateStartLbl" destination="7le-OS-9BO" id="Rdu-6f-y68"/>
@@ -94,4 +99,7 @@
             <point key="canvasLocation" x="61.5" y="72"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="add_driver" width="58" height="23"/>
+    </resources>
 </document>
