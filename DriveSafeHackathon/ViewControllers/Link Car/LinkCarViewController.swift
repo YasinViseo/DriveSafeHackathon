@@ -19,9 +19,6 @@ class LinkCarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		navigationController?.setNavigationBarHidden(false, animated: true)
-		navigationController?.navigationBar.tintColor = UIColor.driveSafeTextColor()
-		
 		vinTextField.setLeftPadding(textFieldPadding)
 		vinTextField.setRightPadding(textFieldPadding)
     }
@@ -39,6 +36,21 @@ class LinkCarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+	// MARK: - Actions
+	@IBAction func logOut(_ sender: Any) {
+		AlertGenerator.displayConfirmationAlert(title: "Log out ?",
+		                                        message: "Are you sure you want to log out?",
+		                                        yesHandler: { [weak self] _ in
+													guard let strongSelf = self else { return }
+													
+													// TODO: Call log out API
+													
+													
+													strongSelf.dismiss(animated: true, completion: nil)
+		},
+		                                        noHandler: nil)
+	}
+	
 	@IBAction func linkCar(_ sender: Any) {
 		if isWaiting {
 			return
@@ -59,7 +71,6 @@ class LinkCarViewController: UIViewController {
 		
 		group.enter()
 		
-		// TODO: Show next screen: Add a driver / Trips
 		getDriversList() { [weak self] drivers, error in
 			guard let strongSelf = self else { return }
 			
@@ -75,11 +86,11 @@ class LinkCarViewController: UIViewController {
 			
 			strongSelf.isWaiting = false
 			
-			if strongSelf.drivers.count > 0 {
-				strongSelf.performSegue(withIdentifier: "tripsSegue", sender: strongSelf)
-			} else {
+//			if strongSelf.drivers.count > 0 {
+//				strongSelf.performSegue(withIdentifier: "tripsSegue", sender: strongSelf)
+//			} else {
 				strongSelf.performSegue(withIdentifier: "addDriverSegue", sender: strongSelf)
-			}
+//			}
 		}
 
 	}
@@ -114,19 +125,13 @@ class LinkCarViewController: UIViewController {
 					return
 				}
 				
-				if let JSON = response.result.value {
-					print("JSON: \(JSON)")
-					
-					if let completion = completion {
-						completion(true, nil)
-					}
+				if let completion = completion {
+					completion(true, nil)
 				}
-				
 		}
 
 	}
 	
-	// TODO
 	func getDriversList(completion: ((_ drivers: [JSONDictionary], _ error: Error?) -> Void)?) {
 		let url = URL(string: serverURL + kidsListService)
 		let params = [ emailKey: testEmail]
