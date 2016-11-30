@@ -59,12 +59,12 @@
 		A0E3B27C1DEEE81D00127697 /* CloseAddDriverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseAddDriverTableViewCell.swift; sourceTree = "<group>"; };
 		A0E3B27D1DEEE81D00127697 /* CloseAddDriverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CloseAddDriverTableViewCell.xib; sourceTree = "<group>"; };
 		E235CA451DED962B0029BD03 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		E2CE21331DEC691600526649 /* DriveSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E235CA481DEDC9BA0029BD03 /* AddDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddDriverViewController.swift; path = "ViewControllers/Add Driver/AddDriverViewController.swift"; sourceTree = "<group>"; };
 		E235CA4A1DEDDA1E0029BD03 /* AddDriverViewController+UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AddDriverViewController+UIImagePickerControllerDelegate.swift"; path = "ViewControllers/Add Driver/AddDriverViewController+UIImagePickerControllerDelegate.swift"; sourceTree = "<group>"; };
 		E235CA4C1DEDE5A10029BD03 /* TripAnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripAnalysisViewController.swift; path = "ViewControllers/Trip Analysis/TripAnalysisViewController.swift"; sourceTree = "<group>"; };
 		E235CA531DEDE8BA0029BD03 /* TripAnalysisCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripAnalysisCell.swift; path = "ViewControllers/Trip Analysis/TripAnalysisCell.swift"; sourceTree = "<group>"; };
 		E235CA541DEDE8BA0029BD03 /* TripAnalysisCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TripAnalysisCell.xib; path = "ViewControllers/Trip Analysis/TripAnalysisCell.xib"; sourceTree = "<group>"; };
+		E2CE21331DEC691600526649 /* DriveSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CE21361DEC691600526649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CE213B1DEC691600526649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2CE213D1DEC691600526649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			name = SelectDriver;
 			sourceTree = "<group>";
 		};
-		A0E3B26B1DEEE46900127697 /* Add Driver */ = {
+		A0E3B26B1DEEE46900127697 /* Assign Driver */ = {
 			isa = PBXGroup;
 			children = (
 				A0E3B2721DEEE51900127697 /* AddDriverTableViewCell.swift */,
@@ -127,7 +127,7 @@
 				A0E3B27C1DEEE81D00127697 /* CloseAddDriverTableViewCell.swift */,
 				A0E3B27D1DEEE81D00127697 /* CloseAddDriverTableViewCell.xib */,
 			);
-			name = "Add Driver";
+			name = "Assign Driver";
 			sourceTree = "<group>";
 		};
 		D8D2E1B8588089BC5AADD0D3 /* Pods */ = {
@@ -522,7 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = C35G5EW7P5;
 				INFOPLIST_FILE = DriveSafeHackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viseo.DriveSafeHackathon;
@@ -539,7 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = C35G5EW7P5;
 				INFOPLIST_FILE = DriveSafeHackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viseo.DriveSafeHackathon;

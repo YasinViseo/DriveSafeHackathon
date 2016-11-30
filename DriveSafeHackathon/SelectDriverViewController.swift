@@ -22,8 +22,8 @@ class SelectDriverViewController: UIViewController
     @IBOutlet weak var tripTableView: UITableView!
     
     var allTrips: Dictionary  = [String: Any?]()
-//    var reports: NSArray = [Dictionary]
-
+	//    var reports: NSArray = [Dictionary]
+	var selectedIndex = 0
     
     var drivers: [String] = ["All", "Unassigned", "Kevin", "Léa", "Marcel","Bernard"]
     
@@ -52,12 +52,10 @@ class SelectDriverViewController: UIViewController
         getAllTrip()
         
         loadDrivernameOnScrollView()
-        
-        
-        
+		
     }
 
-    
+	
     func loadDrivernameOnScrollView(){
         
         var i = 0
@@ -78,7 +76,7 @@ class SelectDriverViewController: UIViewController
         }
         
         driverNameScrollView.contentSize = CGSize(width:100*i, height:60)
-        
+		
         
     }
     
@@ -131,8 +129,25 @@ class SelectDriverViewController: UIViewController
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: false)
+		selectedIndex = indexPath.row
+		performSegue(withIdentifier: "tripAnalysisSegue", sender: self)
     }
-    
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		
+		if segue.identifier != "tripAnalysisSegue" { return }
+		
+		if let trips = self.allTrips["reports"] as? [JSONDictionary] {
+			
+//			let viewController = (segue.destination as? UINavigationController)?.topViewController
+			
+			if segue.destination is TripAnalysisViewController {
+				let tripAnalysisViewController = segue.destination as! TripAnalysisViewController
+				tripAnalysisViewController.tripDictionary = trips[selectedIndex]
+			}
+		}
+	}
+	
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
@@ -140,7 +155,10 @@ class SelectDriverViewController: UIViewController
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+		
+		//let reports = self.allTrips["reports"] as! NSArray
+
+		
         return allTrips.count
     }
 
@@ -246,11 +264,11 @@ class SelectDriverViewController: UIViewController
         
         return 80
     }
-    /*
+	
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 40
-    }*/
+        return 1
+    }
     
     
     
